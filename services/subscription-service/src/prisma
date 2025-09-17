@@ -1,0 +1,11 @@
+model Subscription {
+  id               Int      @id @default(autoincrement())
+  userId           Int
+  plan             String
+  status           String   // active, pending, canceled
+  startDate        DateTime?
+  endDate          DateTime?
+  stripeSessionId  String?  @unique
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+}
