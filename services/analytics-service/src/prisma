@@ -1,0 +1,9 @@
+model PlaybackEvent {
+  id           Int      @id @default(autoincrement())
+  userId       Int
+  contentId    String
+  eventType    String   // play, pause, buffering, error
+  bitrate      Int?
+  timestamp    DateTime @default(now())
+  rebufferTime Float?
+}
