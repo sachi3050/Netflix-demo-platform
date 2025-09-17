@@ -5,5 +5,5 @@ const app = express();
 app.use(express.json());
 app.use("/analytics", eventsRoutes);
 
-const PORT = process.env.PORT || 9000;
+const PORT = process.env.PORT || 9001;
 app.listen(PORT, () => console.log(`Analytics service running on ${PORT}`));
