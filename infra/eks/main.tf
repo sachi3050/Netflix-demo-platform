@@ -1,8 +1,8 @@
-provider "aws" { region = var.region }
+provider "aws" { region = "ap-south-1" }
 
 module "eks" {
   source          = "terraform-aws-modules/eks/aws"
-  cluster_name    = var.cluster_name
+  cluster_name    = "sachi_123"
   cluster_version = "1.27"
   subnets         = var.subnets
   vpc_id          = var.vpc_id
